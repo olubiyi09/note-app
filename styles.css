@@ -1,0 +1,189 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap");
+
+:root {
+  --white: #fff;
+  --black: #1c2b2d;
+  --blue: #31326f;
+  --light-blue: #005490;
+  --color-primary: #9d0191;
+  --color-sec: #db6400;
+  --color-grey: #eee;
+  --color-dark-grey: #222831;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 10px;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+}
+
+p {
+  font-size: 1.6rem;
+  line-height: 1.5;
+}
+
+img {
+  width: 100%;
+}
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Custom start here */
+/* Custom start here */
+/* Custom start here */
+
+body {
+  background-color: #eee;
+}
+.navbar {
+  background-color: var(--color-dark-grey);
+}
+.navbar a {
+  text-decoration: none;
+  color: var(--white);
+  font-size: 3rem;
+}
+
+.con-section {
+  display: flex;
+  width: 100%;
+  padding-top: 3rem;
+}
+
+.form-wrapper {
+  width: 35%;
+}
+
+h1 {
+  margin-bottom: 1rem;
+}
+
+.this {
+  margin-bottom: 2rem;
+}
+
+#note-title {
+  margin-top: 1rem;
+}
+
+form > * {
+  display: flex;
+  flex-direction: column;
+  font-size: 1.8rem;
+  padding: 1rem;
+  margin-bottom: 0.5rem;
+  outline: none;
+  width: 100%;
+  border: 1px solid;
+  border-color: rgb(148, 146, 146);
+}
+.note-wrapper {
+  width: 65%;
+}
+
+.add-btn {
+  background-color: rgb(59, 12, 189);
+  border: none;
+  color: #fff;
+  border-radius: 3px;
+  transition: all 0.3s;
+  cursor: pointer;
+}
+
+.add-btn:hover {
+  background-color: #6127cc;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.clear-note-btn {
+  background-color: red;
+  border: none;
+  padding: 0.5rem 1rem;
+  font-size: 1.6rem;
+  border-radius: 3px;
+  color: var(--white);
+  cursor: pointer;
+}
+
+.clear-note-btn:hover {
+  background-color: rgb(204, 31, 31);
+}
+
+.note {
+  background-color: var(--white);
+  margin: 1rem 0;
+  padding: 1rem;
+  border-radius: 3px;
+}
+
+.note > * {
+  margin-bottom: 2rem;
+}
+
+.note-top {
+  display: flex;
+  justify-content: space-between;
+}
+
+.note-index {
+  background-color: var(--color-dark-grey);
+  display: inline-block;
+  color: var(--white);
+  padding: 0.3rem 0.5rem;
+  border-radius: 3px;
+}
+
+.del-btn,
+.edit-btn {
+  background-color: red;
+  border: none;
+  border-radius: 3px;
+  color: var(--white);
+  padding: 5px 8px;
+  font-size: 1.5rem;
+  margin-right: 1rem;
+  cursor: pointer;
+}
+
+.edit-btn {
+  margin-right: 0;
+  background-color: purple;
+  font-size: 1.5rem;
+}
+.fas {
+  margin-right: 5px;
+}
+
+@media screen and (max-width: 600px) {
+  .con-section {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding-top: 3rem;
+  }
+
+  .form-wrapper {
+    width: 95%;
+  }
+  .note-wrapper {
+    width: 100%;
+    margin-top: 9rem;
+  }
+}

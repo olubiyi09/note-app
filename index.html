@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script
+      src="https://kit.fontawesome.com/1935d064dd.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- CSS only -->
+    <!-- <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x"
+      crossorigin="anonymous"
+    /> -->
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="container">
+        <a href="#">Smart Note</a>
+      </div>
+    </nav>
+
+    <!-- NOTE FORM -->
+    <!-- NOTE FORM -->
+    <section class="main">
+      <div class="container con-section">
+        <div class="form-wrapper">
+          <h1 class="this">Add Note</h1>
+          <hr />
+          <!-- FORM -->
+          <form action="">
+            <input type="text" id="note-title" placeholder="Note Title" />
+            <textarea
+              id="note-area"
+              cols="30"
+              rows="10"
+              placeholder="Note details"
+            ></textarea>
+            <button class="add-btn">Add Note</button>
+          </form>
+        </div>
+
+        <div class="note-wrapper">
+          <div class="container">
+            <div class="header">
+              <h1>Your Note</h1>
+              <button class="clear-note-btn">Clear Notes</button>
+            </div>
+
+            <hr />
+            <div class="note-section">
+              <div class="note">
+                <div class="note-top">
+                  <p class="note-index">Note <span class="num">1</span></p>
+                  <div class="btn-wrapper">
+                    <button class="btn del-btn">
+                      <i class="fas fa-trash"></i>Delete
+                    </button>
+                    <button class="btn edit-btn">
+                      <i class="fas fa-edit"></i>Edit
+                    </button>
+                  </div>
+                </div>
+
+                <hr />
+                <p class="note-title"><strong>Title:</strong> Hello World</p>
+                <p class="note-content">This is some content</p>
+                <!-- </div> -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script src="script.js"></script>
+  </body>
+</html>
