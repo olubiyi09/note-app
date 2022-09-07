@@ -76,7 +76,7 @@ function displayNotes() {
   if (notesObj.length != 0) {
     noteElement.innerHTML = myContent;
   } else {
-    noteElement.innerHTML = `<p class="empty-note">Your Note is Empty, Please Note...</p>`;
+    noteElement.innerHTML = `<p class="empty-note">Your Note is Empty, Please add Note...</p>`;
   }
 }
 
@@ -113,7 +113,7 @@ function editNote(index) {
   getNote();
 
   noteTitle.value = notesObj[index].title;
-  noteText.value = notesObj[index].text;
+  noteText.value = notesObj.text;
 
   noteTitle.focus();
   notesObj.splice(index, 1);
