@@ -103,6 +103,8 @@ clearBtn.addEventListener("click", () => {
       localStorage.clear();
       displayNotes();
     }
+  } else {
+    alert("Nothing to clear...");
   }
 });
 
