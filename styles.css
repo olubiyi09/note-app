@@ -171,6 +171,10 @@ form > * {
   margin-right: 5px;
 }
 
+.empty-note {
+  margin-top: 3rem;
+}
+
 @media screen and (max-width: 600px) {
   .con-section {
     display: flex;
