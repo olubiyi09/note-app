@@ -44,39 +44,37 @@ addNote.addEventListener("click", (e) => {
 // DISPLAY NOTE
 function displayNotes() {
   getNote();
-  let myContent = "";
 
-  notesObj.forEach(function (note, index) {
-    myContent += `
-    <div class="note">
-                <div class="note-top">
-                  <p class="note-index">Note <span class="num">${
-                    index + 1
-                  }</span></p>
-                  <div class="btn-wrapper">
-                    <button id"${index}" onclick="deleteNote(this.id)" class="btn del-btn">
-                      <i class="fas fa-trash"></i>Delete
-                    </button>
-                    <button id"${index}" onclick="editNote(this.id)" class="btn edit-btn">
-                      <i class="fas fa-edit"></i>Edit
-                    </button>
-                  </div>
-                </div>
+  let html = "";
+  notesObj.forEach(function (element, index) {
+    html += `
+          <div class="note">
+          <div class="note-top">
+            <p class="note-index">Note <span class="num">${index + 1}</span></p>
+            <div class="btn-wrapper">
+              <button id="${index}" onclick="deleteNote(this.id)" class="btn del-btn">
+                <i class="fas fa-trash"></i>Delete
+              </button>
+              <button id="${index}" onclick="editNote(this.id)" class="btn edit-btn">
+                <i class="fas fa-edit"></i>Edit
+              </button>
+            </div>
+          </div>
 
-                <hr />
-                <p class="note-title"><strong>Title:</strong> ${note.title}</p>
-                <p class="note-content">${note.text}</p>
-                <!-- </div> -->
-              </div>
-    `;
+          <hr />
+          <p class="note-title"><strong>Title:</strong> ${element.title}</p>
+          <p class="note-content">${element.text}</p>
+        
+        </div>
+
+      `;
   });
-
-  noteElement.innerHTML = myContent;
+  let noteElm = document.querySelector(".note-section");
 
   if (notesObj.length != 0) {
-    noteElement.innerHTML = myContent;
+    noteElm.innerHTML = html;
   } else {
-    noteElement.innerHTML = `<p class="empty-note">Your Note is Empty, Please add Note...</p>`;
+    noteElm.innerHTML = "No notes added, Please add a Note";
   }
 }
 
@@ -115,7 +113,7 @@ function editNote(index) {
   getNote();
 
   noteTitle.value = notesObj[index].title;
-  noteText.value = notesObj.text;
+  noteText.value = notesObj[index].text;
 
   noteTitle.focus();
   notesObj.splice(index, 1);
